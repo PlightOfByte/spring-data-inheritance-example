@@ -1,5 +1,8 @@
 # Compiled class file
 *.class
+build
+target
+out
 
 # Log file
 *.log
@@ -23,5 +26,5 @@
 hs_err_pid*
 
 .idea
-
 .DS_Store
+.gradle
