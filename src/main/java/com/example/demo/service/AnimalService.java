@@ -21,7 +21,7 @@ public class AnimalService {
 
     public List<AnimalDTO> getAllAnimals() {
         return StreamSupport.stream(animalRepository.findAll().spliterator(), false)
-                .map(animal -> modelMapper.map(animal, animal.getDtoClass()))
+                .map(animal -> modelMapper.map(animal, animal.getDtoClass(), "MyCustomMapper"))
                 .collect(Collectors.toList());
     }
 }

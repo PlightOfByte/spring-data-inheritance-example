@@ -8,4 +8,6 @@ import lombok.Data;
 public class DogDTO extends AnimalDTO {
 
     private Integer numberOfLimbs;
+
+    private String znmxc;
 }

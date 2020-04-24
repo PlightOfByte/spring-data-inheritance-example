@@ -8,4 +8,6 @@ import lombok.Data;
 public class CatDTO extends AnimalDTO {
 
     private Integer numberOfLimbs;
+
+    private String yuiqwe;
 }
