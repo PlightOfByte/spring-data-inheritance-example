@@ -1,9 +1,6 @@
 package com.example.demo.config;
 
-import com.example.demo.dto.BirdDTO;
-import com.example.demo.dto.CatDTO;
-import com.example.demo.dto.DogDTO;
-import com.example.demo.dto.FishDTO;
+import com.example.demo.dto.*;
 import com.example.demo.entity.Bird;
 import com.example.demo.entity.Cat;
 import com.example.demo.entity.Dog;
@@ -18,10 +15,10 @@ public class ObjectMapper {
     @Bean
     public ModelMapper modelMapper() {
         ModelMapper modelMapper = new ModelMapper();
-        modelMapper.typeMap(Bird.class, BirdDTO.class, "MyCustomMapper").addMapping(Bird::getName, BirdDTO::setAbcxy);
-        modelMapper.typeMap(Cat.class, CatDTO.class, "MyCustomMapper").addMapping(Cat::getName, CatDTO::setYuiqwe);
-        modelMapper.typeMap(Dog.class, DogDTO.class, "MyCustomMapper").addMapping(Dog::getName, DogDTO::setZnmxc);
-        modelMapper.typeMap(Fish.class, FishDTO.class, "MyCustomMapper").addMapping(Fish::getName, FishDTO::setIoioqwe);
+        modelMapper.typeMap(Bird.class, AnimalDTO.class).setProvider(req -> modelMapper.map(req.getSource(), BirdDTO.class));
+        modelMapper.typeMap(Cat.class, AnimalDTO.class).setProvider(req -> modelMapper.map(req.getSource(), CatDTO.class));
+        modelMapper.typeMap(Dog.class, AnimalDTO.class).setProvider(req -> modelMapper.map(req.getSource(), DogDTO.class));
+        modelMapper.typeMap(Fish.class, AnimalDTO.class).setProvider(req -> modelMapper.map(req.getSource(), FishDTO.class));
         return modelMapper;
     }
 }

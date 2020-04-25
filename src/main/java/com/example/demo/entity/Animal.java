@@ -20,5 +20,4 @@ public abstract class Animal implements Serializable {
     @Column(name = "NAME")
     private String name;
 
-    public abstract Class<? extends AnimalDTO> getDtoClass();
 }

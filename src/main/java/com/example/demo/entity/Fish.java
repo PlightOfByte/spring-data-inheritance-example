@@ -1,7 +1,5 @@
 package com.example.demo.entity;
 
-import com.example.demo.dto.AnimalDTO;
-import com.example.demo.dto.FishDTO;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -16,8 +14,4 @@ public class Fish extends Animal {
     @Column(name = "ATTRIBUTE_1")
     private Integer numberOfFins;
 
-    @Override
-    public Class<? extends AnimalDTO> getDtoClass() {
-        return FishDTO.class;
-    }
 }

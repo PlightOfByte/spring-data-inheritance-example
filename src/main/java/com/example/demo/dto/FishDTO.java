@@ -8,6 +8,4 @@ import lombok.Data;
 public class FishDTO extends AnimalDTO {
 
     private Integer numberOfFins;
-
-    private String ioioqwe;
 }

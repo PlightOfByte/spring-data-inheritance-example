@@ -8,6 +8,4 @@ import lombok.Data;
 public class BirdDTO extends AnimalDTO {
 
     private Integer numberOfWings;
-
-    private String abcxy;
 }
